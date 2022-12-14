@@ -1,6 +1,14 @@
-function findFirstDuplicate(arr) {
-  // type your code here
+function findFirstDuplicate(array) {
+  const newArr = new Set();
+
+  for (const char of array) {
+    if (newArr.has(char)) return char;
+    newArr.add(char);
+  }
+  return -1;
 }
+
+// type your code here
 
 if (require.main === module) {
   // add your own tests in here
